@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD LAURA</title>
+</head>
+<body>
+
+<div style="text-align: center; padding: 50px;">
+    <h1>lauraa, selamat ulang tahun yaa!</h1>
+    <p>2 februari 2024</p>
+    <video width="400" controls autoplay>
+        <source src="vid lau/HBDDD LAUU.mp4"> type="video/mp4"
+        Maaf, browser Anda tidak mendukung tag video.
+    </video>
+   
+</div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #87CEEB; /* Warna latar belakang langit */
+        }
+
+        .balloon-container {
+            position: relative;
+        }
+
+        .balloon {
+            width: 50px;
+            height: 70px;
+            background-color: #FFD700; /* Warna balon */
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: absolute;
+            animation: floatUp 5s linear infinite;
+        }
+
+        .string {
+            width: 2px;
+            height: 100px; /* Panjang tali */
+            background-color: #654321; /* Warna tali */
+            position: absolute;
+            top: 70px; /* Mengatur posisi tali pada bagian bawah balon */
+            left: 24px; /* Mengatur posisi tali di bagian tengah balon */
+            animation: floatUp 5s linear infinite;
+            transform-origin: top center; /* Pusat transformasi di bagian atas tengah tali */
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-300px) scale(1.1);
+            }
+            100% {
+                transform: translateY(-600px) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+    <title>Efek Balon dengan Tali</title>
+</head>
+<body>
+
+<script>
+    function createBalloon() {
+        const balloonContainer = document.createElement('div');
+        balloonContainer.classList.add('balloon-container');
+        document.body.appendChild(balloonContainer);
+
+        const balloon = document.createElement('div');
+        balloon.classList.add('balloon');
+        balloonContainer.appendChild(balloon);
+
+        const string = document.createElement('div');
+        string.classList.add('string');
+        balloonContainer.appendChild(string);
+
+        balloonContainer.style.left = `${Math.random() * window.innerWidth}px`;
+
+        setTimeout(() => {
+            document.body.removeChild(balloonContainer);
+        }, 5000); // Hapus balon setelah 5 detik
+    }
+
+    setInterval(createBalloon, 1000); // Buat balon setiap 1 detik
+</script>
+
+</body>
+</html>
